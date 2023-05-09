@@ -1,3 +1,3 @@
 # vitejs-vite-mvvsut
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/vitejs-vite-mvvsut)
+[Edit on GitHub ⚡️](https://github.com/shaif-uddin/vitejs-vite-mvvsut)
