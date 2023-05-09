@@ -1,17 +1,28 @@
 import "./App.css";
 
 function App() {
+  const peoples = ["Rubel Ahmed", "John", "John Smith"];
+  const peopleTextColor = [
+    {
+      color: "red",
+    },
+  ];
   return (
-    <div className="App">
-      <Person name="Rubel"></Person>
-      <Person name="Shaif"></Person>
-    </div>
+    <>
+      {peoples.map((people, index) => (
+        <Person name={people} key={index}></Person>
+      ))}
+    </>
   );
 }
 
 function Person(props) {
   console.log(props);
-  return <h2>My name is {props.name}</h2>;
+  return (
+    <div className="people">
+      <h2>{props.name}</h2>
+    </div>
+  );
 }
 
 export default App;
