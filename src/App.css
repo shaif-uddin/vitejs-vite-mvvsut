@@ -1,9 +1,6 @@
-.people {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  width: 200px;
-  margin: 0 auto;
-  border: 1px solid saddlebrown;
-  background-color: aquamarine;
+.product {
+  background-color: chartreuse;
+  padding: 20px;
   border-radius: 5px;
+  margin: 5px;
 }

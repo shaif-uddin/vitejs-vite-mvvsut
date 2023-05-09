@@ -1,26 +1,38 @@
 import "./App.css";
 
 function App() {
-  const peoples = ["Rubel Ahmed", "John", "John Smith"];
-  const peopleTextColor = [
+  const products = [
     {
-      color: "red",
+      id: 1,
+      name: "Laptop",
+      price: 1000,
+    },
+    {
+      id: 2,
+      name: "Smartphone",
+      price: 2000,
+    },
+    {
+      id: 3,
+      name: "Tablet",
+      price: 3000,
     },
   ];
   return (
     <>
-      {peoples.map((people, index) => (
-        <Person name={people} key={index}></Person>
+      {products.map((product) => (
+        <Product key={product.id} name={product.name} price={product.price} />
       ))}
     </>
   );
 }
 
-function Person(props) {
+function Product(props) {
   console.log(props);
   return (
-    <div className="people">
-      <h2>{props.name}</h2>
+    <div className="product">
+      <h3>Name: {props.name}</h3>
+      <p>Price: {props.price}</p>
     </div>
   );
 }
