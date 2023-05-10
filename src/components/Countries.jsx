@@ -12,16 +12,8 @@ const Countries = () => {
     <div className="main-content">
       <section className="cards-container">
         {countries.map((country) => (
-          <div className="country-card">
-            <Country
-              //   name={country.name.common}
-              //   official={country.name.official}
-              //   flag={country.flags.svg}
-              //   population={country.population}
-              //   region={country.region}
-              //   capital={country.capital}
-              country={country}
-            ></Country>
+          <div className="country-card" key={country.cca3}>
+            <Country country={country}></Country>
           </div>
         ))}
       </section>
