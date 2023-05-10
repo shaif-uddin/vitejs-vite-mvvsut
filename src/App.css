@@ -1,0 +1,81 @@
+.main-content {
+  font-family: "Nunito Sans", sans-serif;
+  max-width: 80%;
+  margin: auto;
+  padding: 0;
+}
+.cards-container {
+  grid-template-columns: repeat(4, 1fr);
+  display: grid;
+}
+.country-card {
+  margin-bottom: 2rem;
+  border-radius: 0.3rem;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+a,
+a:focus,
+a:hover {
+  text-decoration: none;
+  color: #111517;
+  color: var(--very-dark-blue);
+}
+.country-card .country-preview img {
+  width: 100%;
+  object-fit: cover;
+}
+.image {
+  display: block;
+  height: 13rem;
+  background-position: 50% 0;
+  background-size: cover;
+  background-attachment: scroll;
+}
+.country-info {
+  padding: 1.7rem;
+  display: block;
+  justify-content: space-between;
+}
+.country-title {
+  font-size: 0.875rem;
+  font-size: var(--font-size-m);
+  display: flex;
+  align-items: center;
+}
+.country-info p {
+  font-weight: 600;
+}
+span {
+  font-weight: 400;
+}
+.country-card {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+}
+@media screen and (min-width: 48em) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    gap: 2rem;
+  }
+}
+@media screen and (min-width: 75em) {
+  .country-card {
+    margin-bottom: 1rem;
+  }
+  .cards-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .main-content {
+    max-width: 90%;
+  }
+}
+
+@media screen and (min-width: 93.75em) {
+  .cards-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
