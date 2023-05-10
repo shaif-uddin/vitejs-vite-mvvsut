@@ -14,12 +14,13 @@ const Countries = () => {
         {countries.map((country) => (
           <div className="country-card">
             <Country
-              name={country.name.common}
-              official={country.name.official}
-              flag={country.flags.svg}
-              population={country.population}
-              region={country.region}
-              capital={country.capital}
+              //   name={country.name.common}
+              //   official={country.name.official}
+              //   flag={country.flags.svg}
+              //   population={country.population}
+              //   region={country.region}
+              //   capital={country.capital}
+              country={country}
             ></Country>
           </div>
         ))}

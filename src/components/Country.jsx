@@ -1,22 +1,24 @@
 const Country = (props) => {
+  const { name, flags, official, area, region, capital, population } =
+    props.country;
   return (
     <>
       <div className="country-preview">
-        <img src={props.flag} alt={props.official} />
+        <img src={flags.svg} alt={name.official} />
       </div>
       <div className="country-info">
         <div className="country-detail">
           <div className="country-title">
-            <h2>{props.name}</h2>
+            <h2>{name.common}</h2>
           </div>
           <p>
-            Population: <span>{props.population.toLocaleString("en-US")}</span>
+            Population: <span>{population.toLocaleString("en-US")}</span>
           </p>
           <p>
-            Region: <span>{props.region}</span>
+            Region: <span>{region}</span>
           </p>
           <p>
-            Capital: <span>{props.capital}</span>
+            Capital: <span>{capital}</span>
           </p>
         </div>
       </div>
