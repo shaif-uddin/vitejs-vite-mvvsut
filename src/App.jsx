@@ -4,46 +4,22 @@ import "./App.css";
 function App() {
   return (
     <>
-      <Counter></Counter>
-      <ExternalUsers></ExternalUsers>
+      <LoadCountries></LoadCountries>
     </>
   );
-}
-function ExternalUsers() {
-  const [users, setUsers] = useState([]);
+} /** App F end here */
+function LoadCountries() {
+  const [countries, setCountries] = useState([]);
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
+    fetch("https://restcountries.com/v3.1/all")
       .then((res) => res.json())
-      .then((data) => setUsers(data));
+      .then((data) => setCountries(data));
   }, []);
   return (
-    <div className="users">
-      {users.map((user) => (
-        <User key={user.id} name={user.name} email={user.email}></User>
-      ))}
-    </div>
-  );
-}
-function User(props) {
-  return (
-    <li className="user" key={props.id}>
-      Name: {props.name} & Email: {props.email}
-    </li>
-  );
-}
-function Counter() {
-  const [count, setCount] = useState(0);
-  const increaseCount = () => {
-    const newCount = count + 1;
-    setCount(newCount);
-  };
-  // console.log(abc);
-  return (
     <>
-      <h1>Count:{count}</h1>
-      <button onClick={increaseCount}>Increase</button>
+      <h2>All Countries</h2>
+      <h2>Total Countries: {countries.length}</h2>
     </>
   );
-}
-
+} /** Load Countries F end here */
 export default App;
