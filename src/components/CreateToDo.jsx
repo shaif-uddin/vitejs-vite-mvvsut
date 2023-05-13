@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState } from "react";
 
 const CreateToDo = () => {
@@ -6,21 +7,14 @@ const CreateToDo = () => {
   const [complete, setComplete] = useState(false);
 
   const handleClick = () => {
-    fetch("https://jsonplaceholder.typicode.com/todos/1", {
-      method: "PUT",
-      body: JSON.stringify({
+    const data = {
+        id: 1,
         userID: userID,
         title: title,
-        complete: complete,
-      }),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => console.log(data));
-    // console.log({ userID: userID, title: title, complete: complete });
-  };
+      complete: complete,
+    };
+    
+   
   return (
     <>
       <h2>Post Request</h2>
