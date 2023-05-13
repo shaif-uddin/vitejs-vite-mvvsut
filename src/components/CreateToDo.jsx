@@ -6,10 +6,10 @@ const CreateToDo = () => {
   const [complete, setComplete] = useState(false);
 
   const handleClick = () => {
-    fetch("https://jsonplaceholder.typicode.com/posts", {
-      method: "POST",
+    fetch("https://jsonplaceholder.typicode.com/todos/1", {
+      method: "PUT",
       body: JSON.stringify({
-        userID: complete,
+        userID: userID,
         title: title,
         complete: complete,
       }),
@@ -23,7 +23,7 @@ const CreateToDo = () => {
   };
   return (
     <>
-      <h2>Hello create to DO</h2>
+      <h2>Post Request</h2>
       <input
         type="number"
         onChange={(event) => {
