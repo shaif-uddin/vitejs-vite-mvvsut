@@ -6,7 +6,20 @@ const CreateToDo = () => {
   const [complete, setComplete] = useState(false);
 
   const handleClick = () => {
-    console.log({ userID: userID, title: title, complete: complete });
+    fetch("https://jsonplaceholder.typicode.com/posts", {
+      method: "POST",
+      body: JSON.stringify({
+        userID: complete,
+        title: title,
+        complete: complete,
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => console.log(data));
+    // console.log({ userID: userID, title: title, complete: complete });
   };
   return (
     <>
@@ -14,7 +27,8 @@ const CreateToDo = () => {
       <input
         type="number"
         onChange={(event) => {
-          setUserID(event.target.value);
+          const number = Number(event.target.value);
+          setUserID(number);
         }}
       />
       <br />
