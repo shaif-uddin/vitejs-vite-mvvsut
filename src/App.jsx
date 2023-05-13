@@ -1,12 +1,9 @@
 import "./App.css";
-
-import Countries from "./components/Countries";
-
+import CreateToDo from "./components/CreateToDo";
 function App() {
   return (
-    <div>
-      <h1>All Countries</h1>
-      <Countries></Countries>
+    <div className="main-content">
+      <CreateToDo></CreateToDo>
     </div>
   );
 } /** App F end here */
