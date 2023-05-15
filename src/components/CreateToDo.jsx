@@ -6,14 +6,14 @@ const CreateToDo = () => {
   const [title, setTitle] = useState("");
   const [complete, setComplete] = useState(false);
 
-  const handleClick = () => {
+  const handleClick = async () => {
     const body = {
       // id: 1,
       userID: userID,
       title: title,
       complete: complete,
     };
-    axios
+    await axios
       .put("https://jsonplaceholder.typicode.com/todos/1", body)
       .then((response) => console.log(response.data))
       .catch((error) => console.log(error.message));
